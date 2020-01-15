@@ -4,4 +4,4 @@
 #define DISABLE_BEACONS
 #define DISABLE_JOIN
 #define CFG_sx1276_radio 1
-#define LMIC_USE_INTERRUPTS
+//#define LMIC_USE_INTERRUPTS
