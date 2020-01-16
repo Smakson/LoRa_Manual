@@ -56,7 +56,7 @@ static uint8_t mydata[] = "Hello, world!"; //the data we wish to send
 static osjob_t sendjob; //the way a library works is over a common struct that manages tasks, called osjob_t
 
 // A constant used above for scheduling transmits.
-const unsigned TX_INTERVAL = 60;
+#define TX_INTERVAL 60
 
 // Pin mapping, used by the HAL defined for Arduino. Can also be obtained from the Dragino wiki at
 // https://wiki.dragino.com/index.php?title=Lora_Shield
@@ -193,7 +193,8 @@ void setup() {
 
     // Set data rate and transmit power (note: txpow seems to be ignored by the library)
     LMIC_setDrTxpow(DR_SF7,14);
-
+    LMIC.dn2Dr = DR_SF9; //with TTN the second RX window should use SF9
+    
     // Start job
     Serial.println(F("First job"));
 
