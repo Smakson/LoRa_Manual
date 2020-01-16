@@ -44,14 +44,6 @@ static const u4_t DEVADDR = ;
 
 // ALL OF THE ABOVE KEYS/ADDRESSES ARE NORMALLY AVAILABLE IN THE TTN CONSOLE IF YOU REGISTERED EVERYTHING CORRECTLY AND ARE USING ABP MODE
 
-
-
-// These callbacks are only used in over-the-air activation, so they are
-// left empty here (we cannot leave them out completely otherwise the linker will complain).
-void os_getArtEui (u1_t* buf) { }
-void os_getDevEui (u1_t* buf) { }
-void os_getDevKey (u1_t* buf) { }
-
 static uint8_t mydata[] = "Hello, world!"; //the data we wish to send
 static osjob_t sendjob; //the way a library works is over a common struct that manages tasks, called osjob_t
 
