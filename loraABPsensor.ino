@@ -224,7 +224,7 @@ void setup() {
     // Start job
     Serial.println(F("Job"));
 
-    do_scan(&scanjob); //here we start with the scan since that is the main job.
+    os_setCallback(&scanjob, do_scan); //here we start with the scan since that is the main job.
 }
 
 void loop() {
