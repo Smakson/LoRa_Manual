@@ -189,8 +189,9 @@ void setup() {
     
     // Start job
     Serial.println(F("First job"));
+    
+    os_setCallback(&sendjob, do_send);
 
-    do_send(&sendjob);
 }
 
 void loop() {
