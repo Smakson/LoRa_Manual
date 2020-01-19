@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 17 19:59:21 2020
-
-@author: Miha
-"""
 
 import paho.mqtt.client as mqtt
 #we will need it to decode the API responses
